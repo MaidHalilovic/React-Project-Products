@@ -2,10 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./homePage.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -18,10 +14,10 @@ function HomePage() {
       );
 
       console.log(data);
-      if (data && Array.isArray(data.products)) {
+      if (data.products.length > 0) {
         setProduct(data.products);
       } else {
-        console.error("there are no products");
+        console.error("no products");
       }
     } catch (error) {
       console.error("error while fetching products", error);
@@ -34,10 +30,6 @@ function HomePage() {
 
   return (
     <div className='MainContainer'>
-      <div className='Header'>
-        <h1>Products</h1>
-        <button onClick={() => navigate("/SeeMore ")}>See More</button>
-      </div>
       <div className='Navbar'>
         <h1>Navbar</h1>
         <div className='cards'>
@@ -57,23 +49,6 @@ function HomePage() {
               <button onClick={() => navigate("/SeeMore ")}>See More</button>
             </div>
           ))}
-        </div>
-      </div>
-      <div className='Footer'>
-        <h3>For more information</h3>
-        <div>
-          <a href='https://github.com/MaidHalilovic' target='_blank'>
-            <FaGithub size={35} color='black' />
-          </a>
-          <a href='https://instagram.com' target='_blank'>
-            <FaInstagram size={35} color='black' />
-          </a>
-          <a href='https://twitter.com' target='_blank'>
-            <BsTwitterX size={35} color='black' />
-          </a>
-          <a href='https://gmail.com' target='_blank'>
-            <MdEmail size={35} color='black' />
-          </a>
         </div>
       </div>
     </div>
