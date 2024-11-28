@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./homePage.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -30,8 +32,9 @@ function HomePage() {
 
   return (
     <div className='MainContainer'>
+      <Header products={product} />
       <div className='Navbar'>
-        <h1>Navbar</h1>
+        {/* <h1>Navbar</h1> */}
         <div className='cards'>
           {product.map((el, index) => (
             <div key={index} className='card'>
@@ -46,11 +49,18 @@ function HomePage() {
                 <b>Description:</b>
                 {el.description}
               </p>
-              <button onClick={() => navigate("/SeeMore ")}>See More</button>
+              <button
+                onClick={() =>
+                  navigate("/SeeMore", { state: { products: product } })
+                }
+              >
+                See More
+              </button>
             </div>
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

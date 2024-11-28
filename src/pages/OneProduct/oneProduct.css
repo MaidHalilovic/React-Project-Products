@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  left: 700px;
+  width: 500px;
+  top: 100px;
+  height: 330px;
+  border: solid black 1px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: darkgray;
+}
+
+.product-details button:hover {
+  background-color: beige;
+  border: beige;
+}
+
+.product-details button {
+  background-color: lightgray;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: solid 1px lightgray;
+  position: relative;
+  top: 30px;
+  left: 200px;
+}

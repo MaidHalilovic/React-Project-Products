@@ -3,36 +3,6 @@
   padding: 0;
 }
 
-/* .Header {
-  display: flex;
-  flex-direction: row;
-  background-color: gray;
-  transition-duration: 1s;
-  cursor: pointer;
-  gap: 60%;
-  padding: 20px;
-}
-.Header h1 {
-  padding: 20px;
-}
-
-.Header button:hover {
-  background-color: beige;
-  color: black;
-  border: solid beige;
-}
-
-.Header button {
-  font-size: 14px;
-  background-color: white;
-  border-radius: 10px;
-  border: solid white;
-  display: flex;
-  padding: 10px;
-  width: 150px;
-  padding: 30px 40px;
-} */
-
 .Navbar {
   background-color: lightgray;
   min-height: auto;
@@ -69,23 +39,11 @@
 .card button {
   background-color: lightgray;
   position: relative;
-  left: 320px;
-  top: 20px;
+  left: 340px;
+  top: auto;
   border: white;
   width: 150px;
   height: 50px;
   border-radius: 5px;
   font-size: 18px;
 }
-
-/* .Footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 50px;
-  flex-direction: column;
-}
-.Footer a {
-  padding: 10px;
-} */
